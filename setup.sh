@@ -40,9 +40,11 @@ pip install -r requirements.txt
 echo "setting up ansible directory"
 if [ ! -d "ansible" ]
 then
-    mkdir ./ansible
+    mkdir -p ./ansible/roles
 fi
-
-echo "git clone ansible repo ..."
 cd ansible
+wget "https://raw.githubusercontent.com/sudeepgupta90/setup-env-dockeransibleautomation/master/ansible.cfg"
+echo "git clone ansible repo ..."
+
+cd roles/
 git clone $ANSIBLE_GIT
