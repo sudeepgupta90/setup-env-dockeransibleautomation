@@ -22,7 +22,7 @@ This will setup the git repo [ansible-ntp](https://github.com/sudeepgupta90/ansi
 	│       └── ansible-ntp
 	│           ├── defaults
 	│           │   └── main.yml
-	│       	├── example_hosts
+	│           ├── example_hosts
 	│           ├── handlers
 	│           │   └── main.yml
 	│           ├── LICENSE
