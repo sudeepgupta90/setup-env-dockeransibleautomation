@@ -4,9 +4,8 @@ This is a nifty script which creates the working environment for [Ansible develo
 
 #### How does this script work?
 
-  **Prerequisites:**
-
-   * you must have a git repository which you would be developing with
+You can either begin with an empty/pre-existing git repository, or you could simply just setup the environment and later do as you wish. However, it is recommended to begin with a git repo.
+  
 
 ##### Setup:
     wget "https://raw.githubusercontent.com/sudeepgupta90/setup-env-dockeransibleautomation/master/setup.sh"

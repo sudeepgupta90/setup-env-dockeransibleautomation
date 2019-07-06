@@ -2,13 +2,17 @@
 
 echo "Setup Ansible Dev Environment!"
 
+flag=0
+
 if [ $# -eq 0 ]
 then
-    echo "specify git repo to clone, and setup ansible dev environment!"
-    exit 1
+    echo "you did not specify git repo to clone..."
+    echo "will only setup environment!"
+    flag=1
+else
+	ANSIBLE_GIT=$1
 fi
 
-ANSIBLE_GIT=$1
 PYTHON_VENV="venv"
 DIR="$( cd "$( dirname "$0" )" && pwd )"
 
@@ -44,7 +48,12 @@ then
 fi
 cd ansible
 wget "https://raw.githubusercontent.com/sudeepgupta90/setup-env-dockeransibleautomation/master/ansible.cfg"
-echo "git clone ansible repo ..."
 
-cd roles/
-git clone $ANSIBLE_GIT
+if [ $flag -eq 0 ]
+then
+	echo "git clone ansible repo ..."
+	cd roles/
+	git clone $ANSIBLE_GIT
+fi
+
+echo "setup complete"
